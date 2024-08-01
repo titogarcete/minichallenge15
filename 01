@@ -1,0 +1,16 @@
+class Motor:
+    def __init__(self, tipo):
+        self.tipo = tipo
+
+    def describir(self):
+        print(f"Motor de tipo: {self.tipo}")
+
+class Auto:
+    def __init__(self, tipo_motor):
+        self.motor = Motor(tipo_motor)
+
+    def describir_motor(self):
+        self.motor.describir()
+
+auto = Auto("V32")
+auto.describir_motor()
